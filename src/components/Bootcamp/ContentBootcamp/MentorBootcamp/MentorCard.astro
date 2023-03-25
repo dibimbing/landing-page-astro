@@ -1,0 +1,72 @@
+---
+export interface Props {
+  name: string;
+  position: string;
+  description: string;
+  imageUrl: string;
+  linkedin: string;
+}
+
+const { name, position, description, imageUrl, linkedin } = Astro.props;
+---
+
+<div
+  class="h-[300px] relative bg-gradient-mentor-card rounded-xl transition-colors"
+>
+  <img
+    class="object-cover h-[300px] relative rounded-xl overflow-hidden"
+    src={imageUrl}
+  />
+
+  <div
+    class="p-4 bg-[rgba(46, 46, 46, 0.75)] absolute left-0 right-0 overflow-hidden w-full bottom-0 rounded-lg h-[80px] hover:h-[300px] transition-ease bg-gradient-mentor-card-text"
+  >
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col h-full gap-1">
+        <h4 class="text-white font-bold text-xl">{name}</h4>
+        <h5 class="text-white font-semibold text-base">
+          {position}
+        </h5>
+        <a target="_blank" href={linkedin}>
+          <div class="flex flex-row items-center text-white font-bold">
+            <span class="pt-1">
+              <box-icon
+                type="logo"
+                name="linkedin-square"
+                color="white"
+                size="16px"></box-icon>
+            </span>
+            <span class="ml-1">Linkedin</span>
+          </div>
+        </a>
+      </div>
+      <div class="overflow-auto max-h-[100px] hide-scroll-bar">
+        <p class="text-white">
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg-gradient-mentor-card {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 76.48%
+    );
+  }
+
+  .bg-gradient-mentor-card-text {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 76.48%
+    );
+  }
+
+  .bg-gradient-mentor-card-text:hover {
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+</style>

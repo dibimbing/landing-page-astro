@@ -1,0 +1,53 @@
+---
+import BenefitCard from "./BenefitCard.astro";
+---
+
+<div class="flex flex-col gap-10" id="about">
+  <div class="flex flex-col gap-5">
+    <p class="font-bold text-xl text-primary">Tentang Program</p>
+    <p class="font-bold text-2xl md:text-[34px] text-black">
+      Pelajari Cara Membuat Aplikasi yang User Friendly dan Interaktif!
+    </p>
+    <p class="text-grey800">
+      Bootcamp UI UX Design merupakan program pelatihan intensif yang bertujuan
+      untuk meningkatkan kemampuan peserta dalam membuat aplikasi mobile & web
+      untuk dijadikan portofolio yang menjual bersama praktisi digital
+      berpengalaman selama 4,5 bulan tanpa perlu background pendidikan yang
+      sesuai.
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-5">
+    <p class="font-bold text-2xl md:text-[34px] text-black">
+      Opsi Karier untuk UI UX Designer di Indonesia
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+      <BenefitCard />
+      <BenefitCard />
+      <BenefitCard />
+    </div>
+    <p>Sumber: <span class="font-bold">indeed.com & glassdor</span></p>
+  </div>
+
+  <div class="flex flex-col gap-5">
+    <p class="font-bold text-2xl md:text-[34px] text-black">
+      Apa yang Akan Kamu Dapatkan dari Program Bootcamp Ini?
+    </p>
+    <div class="flex flex-col items-start gap-4">
+      <div class="flex flex-row items-center gap-4">
+        <box-icon name="check-circle" color="#0BB1CB" size="26px"></box-icon>
+        <p class="text-grey800">Live Class Selama 35+ Pertemuan</p>
+      </div>
+      <div class="flex flex-row items-center gap-4">
+        <box-icon name="check-circle" color="#0BB1CB" size="26px"></box-icon>
+        <p class="text-grey800">
+          Tambahan 20+ Video Learning untuk Menunjang Pembelajaran Kelas
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-5">
+    <p class="font-bold text-2xl md:text-[34px] text-black">Cuplikan Bootcamp</p>
+  </div>
+</div>

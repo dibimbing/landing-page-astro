@@ -1,0 +1,33 @@
+---
+export interface Props {
+  name: string;
+  position: string;
+  description: string;
+  imageUrl: string;
+  linkedin: string;
+}
+
+const { name, position, description, imageUrl, linkedin } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 items-start max-w-[240px]">
+  <img
+    src={imageUrl}
+    alt={name}
+    height="300px"
+    width="240px"
+    class="rounded-xl object-cover min-h-[300px] min-w-[240px]"
+  />
+  <p class="font-bold text-xl text-grey800">{name}</p>
+  <p class="font-semibold text-grey800">{position}</p>
+  <p class="text-grey800">{description}</p>
+  <a target="_blank" href={linkedin}>
+    <div class="flex flex-row items-center text-grey800 font-bold">
+      <span class="pt-1">
+        <box-icon type="logo" name="linkedin-square" color="black" size="16px"
+        ></box-icon>
+      </span>
+      <span class="ml-1">Linkedin</span>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,51 @@
+---
+const menus = [
+  {
+    title: "Beranda",
+    link: "/",
+  },
+  {
+    title: "Layanan",
+    link: "",
+  },
+  {
+    title: "Persiapan Karir",
+    link: "",
+  },
+  {
+    title: "Kerja Sama",
+    link: "",
+  },
+  {
+    title: "Tentang Kami",
+    link: "",
+  },
+  {
+    title: "Blog",
+    link: "",
+  },
+];
+---
+
+<div class="fixed w-full bg-[#FFFFFF]">
+  <div class="max-w-[1240px] mx-auto">
+    <div class="flex items-center gap-5 py-6 px-2 md:p-3">
+      <img
+        src="/images/logo-dibimbing.png"
+        class="h-6 md:h-10 object-contain"
+        alt="dibimbing"
+      />
+      <div class="hidden md:inline">
+        <div class="flex items-center gap-5">
+          {
+            menus.map((menu) => (
+              <a href={menu.link}>
+                <p class="text-grey700 font-bold">{menu.title}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/global.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"
+    ></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #ffffff;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .side-item-box-shadow {
+    cursor: pointer;
+    box-shadow: inset 2px 0px 0px #ccd4db;
+    transition: ease 0.5;
+  }
+
+  .side-item-box-shadow:hover {
+    cursor: pointer;
+    box-shadow: inset 2px 0px 0px #0bb1cb;
+    transition: ease 0.5;
+  }
+
+  .side-item-box-shadow-active {
+    cursor: pointer;
+    box-shadow: inset 2px 0px 0px #0bb1cb;
+    background-color: #0bb1cb1a;
+    transition: ease 0.5;
+  }
+
+  .transition-ease {
+    transition: ease 0.5s;
+  }
+
+  .hide-scroll-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-height: none;
+    scroll-behavior: smooth;
+  }
+</style>

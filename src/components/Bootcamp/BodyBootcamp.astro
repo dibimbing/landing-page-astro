@@ -1,0 +1,30 @@
+---
+import AboutBootcamp from "./ContentBootcamp/AboutBootcamp/AboutBootcamp.astro";
+import CurriculumBootcamp from "./ContentBootcamp/CurriculumBootcamp.astro";
+import FlowBootcamp from "./ContentBootcamp/FlowBootcamp.astro";
+import MentorBootcamp from "./ContentBootcamp/MentorBootcamp/MentorBootcamp.astro";
+import MethodBootcamp from "./ContentBootcamp/MethodBootcamp.astro";
+import SidenavBootcamp from "./SidenavBootcamp";
+---
+
+<div class="max-w-[1024px] mx-auto pt-10 md:pt-20">
+  <div
+    class="flex flex-col md:flex-row md:gap-10 w-full justify-between p-4 md:p-0"
+    id="BootcampSection"
+  >
+    <SidenavBootcamp client:load />
+    <div class="w-full max-w-[calc(1024px_-_40px_-_225px)] pt-10 md:pt-0">
+      <div class="flex flex-col items-start gap-20">
+        <AboutBootcamp />
+        <div class="border-b-2 border-grey200 w-full"></div>
+        <CurriculumBootcamp />
+        <div class="border-b-2 border-grey200 w-full"></div>
+        <FlowBootcamp />
+        <div class="border-b-2 border-grey200 w-full"></div>
+        <MethodBootcamp />
+        <div class="border-b-2 border-grey200 w-full"></div>
+        <MentorBootcamp />
+      </div>
+    </div>
+  </div>
+</div>

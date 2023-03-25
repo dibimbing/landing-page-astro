@@ -1,0 +1,7 @@
+.side-item-box-shadow {
+  box-shadow: inset 2px 0px 0px #ccd4db;
+}
+
+.side-item-box-shadow:hover {
+  box-shadow: inset 2px 0px 0px #0bb1cb;
+}
