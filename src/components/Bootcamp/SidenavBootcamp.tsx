@@ -110,7 +110,7 @@ function SidenavBootcamp() {
       // });
       const top = getTop();
       const position = getPosition(shouldStick, shouldUnstickBottom);
-      setNavStyle2(`${position} top-[${top}px]`);
+      setNavStyle2(`${position} top-[100px]`);
     },
     [],
     // @ts-ignore
