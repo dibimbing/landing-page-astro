@@ -1,0 +1,12 @@
+[functions]
+  # Sets a custom directory for Netlify Functions
+  directory = "myfunctions/"
+
+  # Specifies `esbuild` for functions bundling
+  node_bundler = "esbuild"
+
+  # Flags "package-1" as an external node module for all functions
+  external_node_modules = ["i18next-fs-backend", "tsm", "@proload/core"]
+
+  # Includes all Markdown files inside the "files/" directory.
+  included_files = ["files/*.md"]
