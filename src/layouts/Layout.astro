@@ -1,5 +1,6 @@
 ---
 import i18next from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface Props {
   title: string;
@@ -78,56 +79,57 @@ const currentPath = Astro.url.pathname;
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"
     ></script>
+
+    <HeadHrefLangs />
   </head>
   <body>
     <slot />
-  </body>
+  </body><style is:global>
+    :root {
+      --accent: 124, 58, 237;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        #da62c4 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background-color: #ffffff;
+    }
+    code {
+      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+
+    .side-item-box-shadow {
+      cursor: pointer;
+      box-shadow: inset 2px 0px 0px #ccd4db;
+      transition: ease 0.5;
+    }
+
+    .side-item-box-shadow:hover {
+      cursor: pointer;
+      box-shadow: inset 2px 0px 0px #0bb1cb;
+      transition: ease 0.5;
+    }
+
+    .side-item-box-shadow-active {
+      cursor: pointer;
+      box-shadow: inset 2px 0px 0px #0bb1cb;
+      background-color: #0bb1cb1a;
+      transition: ease 0.5;
+    }
+
+    .transition-ease {
+      transition: ease 0.5s;
+    }
+
+    .hide-scroll-bar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-height: none;
+      scroll-behavior: smooth;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: #ffffff;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-
-  .side-item-box-shadow {
-    cursor: pointer;
-    box-shadow: inset 2px 0px 0px #ccd4db;
-    transition: ease 0.5;
-  }
-
-  .side-item-box-shadow:hover {
-    cursor: pointer;
-    box-shadow: inset 2px 0px 0px #0bb1cb;
-    transition: ease 0.5;
-  }
-
-  .side-item-box-shadow-active {
-    cursor: pointer;
-    box-shadow: inset 2px 0px 0px #0bb1cb;
-    background-color: #0bb1cb1a;
-    transition: ease 0.5;
-  }
-
-  .transition-ease {
-    transition: ease 0.5s;
-  }
-
-  .hide-scroll-bar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-height: none;
-    scroll-behavior: smooth;
-  }
-</style>
