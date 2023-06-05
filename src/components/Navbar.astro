@@ -1,39 +1,45 @@
 ---
+import i18next, { t } from "i18next";
 import SelectLanguage from "./AppComponents/SelectLanguage";
+import { LanguageSelector } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
+
 const menus = [
   {
-    title: "Beranda",
-    link: "/",
+    title: t("navbar.home"),
+    link: localizePath("/"),
   },
   {
-    title: "Layanan",
-    link: "",
+    title: t("navbar.service"),
+    link: localizePath("/layanan"),
   },
   {
-    title: "Persiapan Karir",
-    link: "",
+    title: t("navbar.career"),
+    link: localizePath("/karir"),
   },
   {
-    title: "Kerja Sama",
-    link: "",
+    title: t("navbar.cooperation"),
+    link: localizePath("/kerja-sama"),
   },
   {
-    title: "Tentang Kami",
-    link: "",
+    title: t("navbar.about"),
+    link: localizePath("/about"),
   },
   {
-    title: "Blog",
-    link: "",
+    title: t("navbar.blog"),
+    link: localizePath("/blog"),
   },
 ];
 ---
 
 <div class="fixed w-full bg-[#FFFFFF]">
   <div class="max-w-[1240px] mx-auto">
-    <div class="flex items-center gap-5 py-8 px-2 md:p-3 justify-between">
+    <div
+      class="flex items-center gap-5 py-3 md:py-5 px-5 md:px-0 justify-between"
+    >
       <img
         src="/images/logo-dibimbing.png"
-        class="h-6 object-contain"
+        class="h-[27px] md:h-6 object-contain"
         alt="dibimbing"
       />
       <div class="hidden md:inline">
@@ -47,7 +53,21 @@ const menus = [
           }
         </div>
       </div>
-      <SelectLanguage client:load />
+      <!-- <SelectLanguage client:load /> -->
+      <div class="hidden md:inline">
+        <div class="flex gap-5">
+          <LanguageSelector
+            showFlag={true}
+            languageMapping={{ en: "ENG", id: "ID" }}
+            class="border-transparent focus:border-transparent focus:ring-0"
+          />
+          <button
+            type="button"
+            class="h-[45px] w-[100px] text-primary bg-white border-2 border-primary focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-md dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >Masuk</button
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>

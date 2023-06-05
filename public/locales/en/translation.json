@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "home": "Home",
+    "service": "Service",
+    "career": "Career Preparation",
+    "cooperation": "Cooperation",
+    "about": "About Us",
+    "blog": "Blog"
+  }
+}

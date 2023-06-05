@@ -1,10 +1,17 @@
 ---
+import { changeLanguage } from "i18next";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import HeaderHome from "../components/Home/HeaderHome.astro";
+import StatisticHome from "../components/Home/StatisticHome.astro";
+
+changeLanguage("id");
 ---
 
 <Layout
   title="dibimbing.id - Indonesia Butuh 9 Juta Talenta Digital Baru di Tahun 2030"
 >
   <Navbar />
+  <HeaderHome />
+  <StatisticHome />
 </Layout>

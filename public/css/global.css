@@ -5,3 +5,56 @@
 .side-item-box-shadow:hover {
   box-shadow: inset 2px 0px 0px #0bb1cb;
 }
+
+.heading-3-extrabold {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.heading-5-regular {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.heading-6-extrabold {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 25px;
+}
+
+.body-2-regular {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.0125em;
+}
+
+.body-2-semibold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.0125em;
+}
+
+.subtitle-1-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.0015em;
+}
+
+.subtitle-2-bold {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.001em;
+}
+
+.caption-regular {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.004em;
+}

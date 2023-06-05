@@ -1,0 +1,124 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div>
+  <section
+    class="pt-[85px] min-h-[700px] bg-[url(/images/home/bg-home.png)] bg-no-repeat bg-cover hidden md:block"
+  >
+    <div class="flex flex-col items-center">
+      <div
+        class="max-w-[1440px] gap-10 flex items-center min-h-[700px] justify-between"
+      >
+        <div
+          class="flex flex-col gap-10 bg-[url(/images/home/dots-home.png)] bg-no-repeat p-[34px]"
+        >
+          <div class="flex flex-col gap-5">
+            <h1 class="heading-3-extrabold text-white max-w-[634px]">
+              89% Siswa Bootcamp Online Dibimbing.id Berhasil Melangkah Pasti Ke
+              Karir Baru
+            </h1>
+            <h2 class="heading-5-regular text-grey100 max-w-[634px]">
+              Kami telah menciptakan pengalaman belajar yang cocok untuk fresh
+              graduate dan professional dengan bimbingan mentor berpengalaman,
+              kelas persiapan karir, dan program penyaluran kerja bergaransi.
+            </h2>
+          </div>
+
+          <div class="flex flex-col gap-3 items-start">
+            <div class="flex gap-2.5 items-center">
+              <button
+                type="button"
+                class="text-white bg-primary hover:primary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl h-[49px] w-[325px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              >
+                <div class="flex flex-col items-center">
+                  <div class="flex items-center gap-2">
+                    <p>Daftar Sekarang!</p>
+                    <box-icon
+                      type=""
+                      name="down-arrow-circle"
+                      color="white"
+                      size="23px"></box-icon>
+                  </div>
+                </div>
+              </button>
+              <p class="body-2-regular text-grey100 max-w-[162px]">
+                Gabung Bersama 30.000 Digital Learners
+              </p>
+            </div>
+            <div class="flex flex-col items-center w-[325px]">
+              <div class="flex items-center gap-2">
+                <p class="body-2-regular text-grey100 text-center">
+                  Terdaftar dan Diawasi oleh
+                </p>
+                <img
+                  alt="Logo Kominfo"
+                  src="/images/logo-kominfo.png"
+                  class="h-[28px] w-[81px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-[640px]">
+          <img
+            alt="Alumni"
+            src="/images/home/alumni-home.png"
+            class="h-[700px] w-[640px]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pt-[51px] bg-primary900 min-h-[831px] block md:hidden">
+    <div class="flex flex-col gap-5 pt-5 pb-[28px] items-center">
+      <div
+        class="flex flex-col gap-3 px-5 pt-[30px] bg-[url(/images/home/dots-home-mobile.png)] bg-no-repeat"
+      >
+        <p class="heading-6-extrabold text-white text-center">
+          Indonesia Butuh <span class="text-primary"
+            >9 Juta Talenta Digital</span
+          > Baru di Tahun 2030
+        </p>
+        <p class="body-2-regular text-grey100 text-center">
+          Jadilah salah satu talenta digital berbakat di bidang Digital
+          Marketing, Data Science, UIUX Design, dan Web Development bersama
+          Dibimbing.id
+        </p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <button
+          type="button"
+          class="rounded-xl text-white bg-primary hover:primary focus:ring-4 focus:ring-blue-300 text-xl h-[45px] w-[260px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          <div class="flex flex-col items-center">
+            <div class="flex items-center gap-2">
+              <p class="body-2-semibold">Lihat Layanan</p>
+              <box-icon
+              class="mb-1"
+                type=""
+                name="down-arrow-circle"
+                color="white"
+                size="18px"></box-icon>
+            </div>
+          </div>
+        </button>
+        <div class="flex items-center gap-2">
+          <p class="body-2-regular text-grey100 text-center">
+            Terdaftar dan Diawasi oleh
+          </p>
+          <img
+            alt="Logo Kominfo"
+            src="/images/logo-kominfo.png"
+            class="h-[25px] w-[72px]"
+          />
+        </div>
+      </div>
+    </div>
+    <img
+      alt="Alumni"
+      src="/images/home/alumni-home-mobile.png"
+      class="h-[505px] w-[100%] object-contain"
+    />
+  </section>
+</div>
