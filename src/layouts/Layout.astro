@@ -39,6 +39,26 @@ const breadcrumbs = {
     <title>{title}</title>
     <meta name="description" content={description} />
 
+    {/* GA CODE */}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179969255-1"></script>
+    <script
+      set:html={`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-179969255-1');`}
+    />
+
+    {/* GTM Code */}
+    <script
+      set:html={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K3BHFGB');`}
+    />
+
     {
       itemBreadcrumbs ? (
         <>
@@ -84,52 +104,53 @@ const breadcrumbs = {
   </head>
   <body>
     <slot />
-  </body><style is:global>
-    :root {
-      --accent: 124, 58, 237;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        #da62c4 30%,
-        white 60%
-      );
-    }
-    html {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      background-color: #ffffff;
-    }
-    code {
-      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    }
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #ffffff;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
 
-    .side-item-box-shadow {
-      cursor: pointer;
-      box-shadow: inset 2px 0px 0px #ccd4db;
-      transition: ease 0.5;
-    }
+      .side-item-box-shadow {
+        cursor: pointer;
+        box-shadow: inset 2px 0px 0px #ccd4db;
+        transition: ease 0.5;
+      }
 
-    .side-item-box-shadow:hover {
-      cursor: pointer;
-      box-shadow: inset 2px 0px 0px #0bb1cb;
-      transition: ease 0.5;
-    }
+      .side-item-box-shadow:hover {
+        cursor: pointer;
+        box-shadow: inset 2px 0px 0px #0bb1cb;
+        transition: ease 0.5;
+      }
 
-    .side-item-box-shadow-active {
-      cursor: pointer;
-      box-shadow: inset 2px 0px 0px #0bb1cb;
-      background-color: #0bb1cb1a;
-      transition: ease 0.5;
-    }
+      .side-item-box-shadow-active {
+        cursor: pointer;
+        box-shadow: inset 2px 0px 0px #0bb1cb;
+        background-color: #0bb1cb1a;
+        transition: ease 0.5;
+      }
 
-    .transition-ease {
-      transition: ease 0.5s;
-    }
+      .transition-ease {
+        transition: ease 0.5s;
+      }
 
-    .hide-scroll-bar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-height: none;
-      scroll-behavior: smooth;
-    }
-  </style>
+      .hide-scroll-bar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-height: none;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
 </html>
