@@ -24,10 +24,16 @@ const breadcrumbs = {
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <script
-      type="application/ld+json"
-      set:html={`${JSON.stringify(breadcrumbs)}`}
-    />
+    {
+      itemBreadcrumbs ? (
+        <>
+          <script
+            type="application/ld+json"
+            set:html={`${JSON.stringify(breadcrumbs)}`}
+          />
+        </>
+      ) : null
+    }
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
