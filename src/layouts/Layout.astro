@@ -23,7 +23,7 @@ const { title, description, itemBreadcrumbs } = Astro.props;
       set:html={`{
       "@context": "https://schema.org/",
       "@type": "BreadcrumbList",
-      "itemListElement": ${itemBreadcrumbs},
+      "itemListElement": ${itemBreadcrumbs.toString()},
     }`}
     />
 
