@@ -3,15 +3,27 @@ export interface Props {
   title: string;
   description?: string;
   itemBreadcrumbs?: Array<any>;
+  keywords?: string;
+  author?: string;
+  preloadImage?: string;
 }
 
-const { title, description, itemBreadcrumbs } = Astro.props;
+const {
+  title,
+  description,
+  itemBreadcrumbs,
+  keywords = "Dibimbing",
+  author = "Dibimbing",
+  preloadImage,
+} = Astro.props;
 
 const breadcrumbs = {
   "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
   itemListElement: itemBreadcrumbs,
 };
+
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -31,6 +43,21 @@ const breadcrumbs = {
             type="application/ld+json"
             set:html={`${JSON.stringify(breadcrumbs)}`}
           />
+        </>
+      ) : null
+    }
+
+    <link rel="canonical" href={currentPath} />
+    <link href="https://dibimbing.id/" rel="publisher" />
+
+    <meta name="keywords" content={keywords ? keywords : "Dibimbing"} />
+
+    <meta content={author ? author : "Dibimbing"} name="author" />
+
+    {
+      preloadImage ? (
+        <>
+          <link rel="preload" as="image" href={preloadImage} />
         </>
       ) : null
     }
