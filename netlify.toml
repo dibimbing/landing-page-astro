@@ -1,3 +1,3 @@
 [functions]
   # Flags "package-1" as an external node module for all functions
-  external_node_modules = ["astro", "i18next-fs-backend", "tsm", "@proload/core"]
+  external_node_modules = ["i18next-fs-backend"]
