@@ -26,7 +26,7 @@ const breadcrumbs = {
   itemListElement: itemBreadcrumbs,
 };
 
-const currentPath = Astro.url.pathname;
+// const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
       ) : null
     }
 
-    <link rel="canonical" href={`https://dibimbing.id${currentPath}`} />
+    <!-- <link rel="canonical" href={`https://dibimbing.id${currentPath}`} /> -->
     <link href="https://dibimbing.id/" rel="publisher" />
 
     <meta name="keywords" content={keywords ? keywords : "Dibimbing"} />
