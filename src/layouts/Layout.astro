@@ -19,11 +19,12 @@ const { title, description, itemBreadcrumbs } = Astro.props;
     <meta name="description" content={description} />
 
     <script
+      is:inline
       type="application/ld+json"
       set:html={`{
       "@context": "https://schema.org/",
       "@type": "BreadcrumbList",
-      "itemListElement": ${itemBreadcrumbs.toString()},
+      "itemListElement": ${itemBreadcrumbs},
     }`}
     />
 
