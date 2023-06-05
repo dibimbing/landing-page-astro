@@ -1,3 +1,5 @@
 [functions]
+  node_bundler = "esbuild"
+
   # Flags "package-1" as an external node module for all functions
-  external_node_modules = ["i18next-fs-backend"]
+  external_node_modules = ["i18next-fs-backend", "tsm", "@proload/core"]
