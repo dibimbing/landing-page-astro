@@ -2,10 +2,16 @@
 export interface Props {
   title: string;
   description?: string;
-  itemBreadcrumbs?: string;
+  itemBreadcrumbs?: Array<any>;
 }
 
 const { title, description, itemBreadcrumbs } = Astro.props;
+
+const breadcrumbs = {
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  itemListElement: itemBreadcrumbs,
+};
 ---
 
 <!DOCTYPE html>
@@ -18,21 +24,7 @@ const { title, description, itemBreadcrumbs } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    {
-      itemBreadcrumbs ? (
-        <>
-          <script
-            is:inline
-            type="application/ld+json"
-            set:html={`{
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
-      "itemListElement": ${JSON.parse(itemBreadcrumbs)},
-    }`}
-          />
-        </>
-      ) : null
-    }
+    <script is:inline type="application/ld+json" set:html={`${breadcrumbs}`} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
