@@ -5,7 +5,13 @@ export interface Props {
   itemBreadcrumbs?: Array<any>;
 }
 
-const { title, description } = Astro.props;
+const { title, description, itemBreadcrumbs } = Astro.props;
+
+const breadcrumbs = {
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  itemListElement: itemBreadcrumbs,
+};
 ---
 
 <!DOCTYPE html>
@@ -18,13 +24,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        "itemListElement": itemBreadcrumbs
-      }
-    </script>
+    <script type="application/ld+json" set:html={breadcrumbs} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
