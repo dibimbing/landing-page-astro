@@ -1,4 +1,5 @@
 ---
+import SelectLanguage from "./AppComponents/SelectLanguage";
 const menus = [
   {
     title: "Beranda",
@@ -29,10 +30,10 @@ const menus = [
 
 <div class="fixed w-full bg-[#FFFFFF]">
   <div class="max-w-[1240px] mx-auto">
-    <div class="flex items-center gap-5 py-6 px-2 md:p-3">
+    <div class="flex items-center gap-5 py-8 px-2 md:p-3 justify-between">
       <img
         src="/images/logo-dibimbing.png"
-        class="h-6 md:h-10 object-contain"
+        class="h-6 object-contain"
         alt="dibimbing"
       />
       <div class="hidden md:inline">
@@ -40,12 +41,13 @@ const menus = [
           {
             menus.map((menu) => (
               <a href={menu.link}>
-                <p class="text-grey700 font-bold">{menu.title}</p>
+                <p class="text-grey700 text-sm">{menu.title}</p>
               </a>
             ))
           }
         </div>
       </div>
+      <SelectLanguage client:load />
     </div>
   </div>
 </div>

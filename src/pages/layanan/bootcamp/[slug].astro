@@ -3,9 +3,28 @@ import BodyBootcamp from "../../../components/Bootcamp/BodyBootcamp.astro";
 import HeaderBootcamp from "../../../components/Bootcamp/HeaderBootcamp.astro";
 import Navbar from "../../../components/Navbar.astro";
 import Layout from "../../../layouts/Layout.astro";
+
+const itemsBreadcrumbs = [
+  {
+    "@type": "ListItem",
+    position: 1,
+    name: "Bootcamp",
+    item: "https://dibimbing.id/layanan/bootcamp",
+  },
+  {
+    "@type": "ListItem",
+    position: 2,
+    name: "Bootcamp Detail",
+    item: "https://dibimbing.id/layanan/bootcamp/web-development",
+  },
+];
 ---
 
-<Layout title="Layanan Bootcamp">
+<Layout
+  title="UI UX Design Bootcamp"
+  description="Pelajari beragam materi UI UX Design meliputi UX Research, UI Design, UX Writing, dan Product Design selama 4,5 bulan bersama praktisi digital profesional. "
+  itemBreadcrumbs={itemsBreadcrumbs}
+>
   <Navbar />
   <HeaderBootcamp />
   <BodyBootcamp />

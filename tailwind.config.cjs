@@ -8,10 +8,14 @@ module.exports = {
 			white: '#ffffff',
 			black: '#212934',
 			grey200: '#E1E7EC',
-			grey700: '#606062',
+			grey700: '#6E7A8A',
 			grey800: '#404B5A',
 			grey900: '#212934'
 		},
+		animation: {
+			"accordion-down": "accordion-down 0.2s ease-out",
+			"accordion-up": "accordion-up 0.2s ease-out"
+		}
 	},
 	plugins: [
 		require('flowbite/plugin')

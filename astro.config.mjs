@@ -13,5 +13,6 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   output: 'server',
   integrations: [tailwind(), react()],
-  adapter: netlify()
+  adapter: netlify(),
+  site: "https://example.com/",
 });
